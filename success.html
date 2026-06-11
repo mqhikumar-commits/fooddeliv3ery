@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="success">
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you, {{ customer_name }}.</p>
+        <p>You ordered: <strong>{{ selected_food }}</strong></p>
+        <p>Delivery address: {{ address }}</p>
+
+        <a href="/">Order Again</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>QuickBite Food Delivery</h1>
+        <p>Order your favorite food online</p>
+    </header>
+
+    <h2>Menu</h2>
+
+    <div class="menu">
+        {% for item in menu_items %}
+        <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>Price: Rs. {{ item.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Place Order</h2>
+
+    <form action="/order" method="POST">
+        <label>Your Name</label>
+        <input type="text" name="customer_name" required>
+
+        <label>Address</label>
+        <textarea name="address" required></textarea>
+
+        <label>Choose Food</label>
+        <select name="selected_food">
+            {% for item in menu_items %}
+            <option value="{{ item.name }}">
+                {{ item.name }} - Rs. {{ item.price }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Order Now</button>
+    </form>
+</body>
+</html>

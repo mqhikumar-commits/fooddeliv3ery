@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fff8ef;
+    color: #222;
+}
+
+header {
+    background: #e84c3d;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ddd;
+    text-align: center;
+}
+
+form {
+    background: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 12px;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: #e84c3d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.success {
+    text-align: center;
+    margin-top: 100px;
+}
